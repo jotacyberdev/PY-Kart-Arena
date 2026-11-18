@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIXHINHO RUSH — Corrida</title>
+  <link rel="stylesheet" href="/css/race.css">
+</head>
+<body>
+<div class="race-shell">
+  <header class="race-top">
+    <div class="race-logo"><span>🐾</span><strong>BIXHINHO <b>RUSH</b></strong></div>
+    <div class="top-stats">
+      <button class="stat-button gem-buy" id="buyGemsTop" title="Comprar gemas"><span>💎</span><strong id="gemCount">0</strong><small>+</small></button>
+      <div><span>🎒</span><strong id="itemTop">ITEM: Nenhum</strong></div>
+      <div><span>◉</span><strong>RODADA <em id="roundTop">01</em></strong></div>
+      <button class="icon-btn" title="Configurações">⚙</button>
+    </div>
+  </header>
+
+  <main class="race-main">
+    <section class="map-wrap"><div class="map-art"><div class="karts" id="karts"></div></div></section>
+    <aside class="players-panel">
+      <div class="panel-title"><span>🏁</span> PARTICIPANTES</div>
+      <div id="playersList"></div>
+      <div class="mini-rule">Ordem fixa • Tigrinho → Veado → Onça → Macaco</div>
+      <section class="console"><div class="console-head"><span>🖥️ CONSOLE DA CORRIDA</span><button id="clearLog">×</button></div><div class="console-log" id="consoleLog"></div></section>
+    </aside>
+  </main>
+
+  <section class="control-area">
+    <div class="turn-box"><div class="turn-character" id="turnArt">🐯</div><div class="turn-copy"><small>VEZ DO</small><strong id="turnName">Tigrinho</strong><span id="turnHint">Sua vez. Lance o D3.</span></div><div class="turn-house" aria-live="polite"><small>POSIÇÃO</small><strong>CASA <span id="turnHouse">1</span></strong><span id="turnBiome">FLORESTA</span></div></div>
+    <div class="dice-box"><div class="dice" id="dice">⚄</div><span>D3</span></div>
+    <button class="action primary-action" id="rollButton">🎲 LANÇAR D3</button>
+    <button class="action wheel-action" id="wheelButton">🎡 RODA DA SORTE</button>
+    <button class="action shop-action" id="shopButton">🛒 LOJA</button>
+    <button class="action secondary-action" id="itemButton" disabled>🎒 ABRIR BOLSA</button>
+  </section>
+
+</div>
+
+<div class="modal hidden" id="questionModal"><section class="question-card"><div class="question-tag">🧠 DESAFIO DA RODADA</div><h2 id="questionText"></h2><div class="answers" id="answers"></div><div class="question-foot"><span id="questionStatus">Escolha uma resposta.</span><button id="answerButton" disabled>RESPONDER</button></div></section></div>
+
+<div class="modal hidden" id="wheelModal"><section class="wheel-card"><button class="modal-close" data-close="wheelModal">×</button><div class="question-tag">🎁 RECOMPENSA</div><h2>RODA DA SORTE</h2><p>Gire a roleta e ganhe gemas.</p><div class="wheel-pointer">▼</div><div class="wheel" id="wheel"><div class="wheel-center">🐾</div><span class="prize p1">+100</span><span class="prize p2">+20</span><span class="prize p3">+5</span><span class="prize p4">+1</span><span class="prize p5">+2</span><span class="prize p6">+10</span><span class="prize p7">+5</span></div><button class="primary wheel-spin" id="spinButton">🎡 GIRAR</button><div class="wheel-result" id="wheelResult">1 giro a cada 24 horas.</div></section></div>
+
+<div class="modal hidden" id="bagModal"><section class="shop-card bag-card"><button class="modal-close" data-close="bagModal">×</button><div class="question-tag">🎒 INVENTÁRIO</div><h2>BOLSA DE ITENS</h2><p class="shop-balance">Selecione um item para usar durante a corrida.</p><div class="bag-grid" id="bagGrid"></div></section></div>
+
+<div class="modal hidden" id="shopModal"><section class="shop-card"><button class="modal-close" data-close="shopModal">×</button><div class="question-tag">🛒 LOJA</div><h2>Itens para atrapalhar os inimigos</h2><p class="shop-balance">Seu saldo: 💎 <b id="shopGemCount">0</b></p><div class="shop-grid" id="shopGrid"></div></section></div>
+
+<div class="modal hidden" id="buyModal"><section class="buy-card"><button class="modal-close" data-close="buyModal">×</button><div class="question-tag">💎 COMPRA DE GEMAS</div><h2>20 gemas por R$ 100,00</h2><p class="muted">Simulação escolar. Nenhum cartão é enviado ou armazenado.</p><label>Nome no cartão<input id="cardName" placeholder="Nome fictício"></label><label>Número do cartão<input id="cardNumber" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" autocomplete="off"></label><label>CPF fictício<input id="cardCpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00"></label><div class="two-fields"><label>Validade<input id="cardExpiry" maxlength="5" inputmode="numeric" placeholder="MM/AA"></label><label>CVV<input id="cardCvv" maxlength="3" inputmode="numeric" placeholder="000"></label></div><button class="primary" id="simulatePurchase">SIMULAR COMPRA — R$ 100,00</button><p id="purchaseStatus" class="purchase-status"></p></section></div>
+
+
+<div class="modal hidden" id="miniGameModal" role="dialog" aria-modal="true" aria-labelledby="miniGameTitle">
+  <section class="mini-game-card">
+    <button class="modal-close" id="miniGameClose" aria-label="Fechar minijogo">×</button>
+    <div class="question-tag">🎮 MINIJOGO DE TESTE</div>
+    <h2 id="miniGameTitle">Minijogo</h2>
+    <p id="miniGameInstructions">Use o desafio para testar.</p>
+    <div id="miniGameArea" class="mini-game-area"></div>
+    <p id="miniGameStatus" class="mini-game-status" aria-live="polite"></p>
+    <button class="primary hidden" id="miniGameRestart">TENTAR NOVAMENTE</button>
+  </section>
+</div>
+
+<div class="modal hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><section class="result-card"><button class="modal-close" id="resultCloseButton" aria-label="Fechar resultado">×</button><div class="result-confetti" id="resultConfetti" aria-hidden="true">🏆</div><div class="question-tag" id="resultEyebrow">🏁 FIM DE JOGO</div><h2 id="resultTitle">VOCÊ VENCEU!</h2><p id="resultMessage">Resultado da corrida.</p><div class="result-ranking" id="resultRanking"></div><div class="result-actions"><button class="primary" id="restartGameButton">JOGAR NOVAMENTE</button></div><small class="result-shortcuts" id="resultShortcuts">Atalhos de teste: Ctrl+P 1º • Ctrl+O 2º • Ctrl+I 3º • Ctrl+U 4º</small></section></div>
+<div class="toast hidden" id="toast"></div>
+<script src="/js/race.js"></script>
+</body>
+</html>
