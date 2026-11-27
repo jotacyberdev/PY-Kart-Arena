@@ -110,8 +110,9 @@ function renderKarts(){
    el.style.left=`${x+ox}%`;el.style.top=`${y+oy}%`;el.style.setProperty('--kart-color',colors[r.color]||'#43b8ff');
    el.style.setProperty('--kart-highlight',({red:'#ff786e',blue:'#83d7ff',green:'#7cf0ad',gold:'#ffe078'})[r.color]||'#83d7ff');
    el.style.setProperty('--kart-highlight',({red:'#ff786e',blue:'#83d7ff',green:'#7cf0ad',gold:'#ffe078'})[r.color]||'#83d7ff');
-   // Os karts sempre apontam para a direita, inclusive quando a faixa retorna.
-   el.classList.add('kart-forward');
+   // Na Praia (casas 11–20), a pista retorna da direita para a esquerda.
+   // Espelhamos o sprite inteiro para o animal e o kart virarem juntos.
+   if(r.pos>=11 && r.pos<=20) el.classList.add("kart-reverse");
    const spriteByName={"Tigrinho":"tigrinho-kart.png","Veado":"veado-kart.png","Onça-pintada":"onca-kart.png","Macaco":"macaco-kart.png"};
    const sprite=spriteByName[r.name]||"tigrinho-kart.png";
    el.innerHTML=`<img class="kart-sprite" src="/assets/karts/${sprite}?v=2" alt="" draggable="false">${r.id===human.id?'<span class="you-badge">VOCÊ</span>':''}`;
@@ -119,7 +120,19 @@ function renderKarts(){
  });
 }
 function renderPlayers(){
- const ranking=[...roster].sort((a,b)=>b.pos-a.pos);$("playersList").innerHTML=ranking.map((r,i)=>`<div class="player-card ${r.id===ordered[turnIndex].id?"turn":""}"><div class="rank">${i+1}º</div><div class="p-emoji">${r.emoji}</div><div class="p-info"><strong>${r.name}</strong><span>CASA ${r.pos} • 💎 ${r.id===human.id?gems:r.gems}</span></div></div>`).join("");
+ const ranking=[...roster].sort((a,b)=>b.pos-a.pos);
+ $("playersList").innerHTML=ranking.map((r,i)=>{
+  const isTurn=r.id===ordered[turnIndex].id;
+  const progress=Math.max(0,Math.min(100,(r.pos/30)*100));
+  const medal=["🥇","🥈","🥉","🏁"][i];
+  return `<div class="player-card ${isTurn?"turn":""}" aria-label="${i+1}º lugar, ${r.name}, casa ${r.pos}">
+   <div class="rank" title="${i+1}º lugar">${medal}</div>
+   <div class="p-emoji">${r.emoji}</div>
+   <div class="p-info"><strong>${r.name}</strong><span><b>CASA ${r.pos}</b><i>•</i> 💎 ${r.id===human.id?gems:r.gems}</span></div>
+   ${isTurn?'<span class="turn-tag">SUA VEZ</span>':''}
+   <div class="player-progress" aria-label="${Math.round(progress)}% da corrida"><i style="width:${progress}%"></i></div>
+  </div>`;
+ }).join("");
  $("gemCount").textContent=gems;$("shopGemCount").textContent=gems;updateItemTop();
 }
 function updateItemTop(){const inv=human.items;$("itemTop").textContent=inv.length?`ITEM: ${shopItems.find(x=>x.id===inv[0])?.name||"Nenhum"}`:"ITEM: Nenhum";$("itemButton").disabled=!inv.length||rolling;}

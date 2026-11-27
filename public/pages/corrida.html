@@ -24,9 +24,10 @@
       <div class="panel-title"><span>🏁</span> PARTICIPANTES</div>
       <div id="playersList"></div>
       <div class="mini-rule">Ordem fixa • Tigrinho → Veado → Onça → Macaco</div>
-      <section class="console"><div class="console-head"><span>🖥️ CONSOLE DA CORRIDA</span><button id="clearLog">×</button></div><div class="console-log" id="consoleLog"></div></section>
     </aside>
   </main>
+
+  <section class="console" aria-label="Registro de acontecimentos da corrida"><div class="console-head"><span>🖥️ CONSOLE DA CORRIDA <small>• HISTÓRICO DA PARTIDA</small></span><button id="clearLog" title="Limpar histórico" aria-label="Limpar histórico">×</button></div><div class="console-log" id="consoleLog" aria-live="polite" aria-relevant="additions"></div></section>
 
   <section class="control-area">
     <div class="turn-box"><div class="turn-character" id="turnArt">🐯</div><div class="turn-copy"><small>VEZ DO</small><strong id="turnName">Tigrinho</strong><span id="turnHint">Sua vez. Lance o D3.</span></div><div class="turn-house" aria-live="polite"><small>POSIÇÃO</small><strong>CASA <span id="turnHouse">1</span></strong><span id="turnBiome">FLORESTA</span></div></div>
