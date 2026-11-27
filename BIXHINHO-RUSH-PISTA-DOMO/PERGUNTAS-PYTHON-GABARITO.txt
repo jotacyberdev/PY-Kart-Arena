@@ -1,0 +1,492 @@
+BIXHINHO RUSH — BANCO DE PERGUNTAS DE PYTHON
+Total: 61 perguntas de múltipla escolha
+
+GABARITO COM RESPOSTAS E EXPLICAÇÕES
+
+1. Qual função exibe uma mensagem no console?
+     A) input()
+   → B) print()
+     C) show()
+     D) console()
+   Resposta correta: B) print()
+   Explicação: print() exibe valores no console.
+
+2. Qual tipo representa um número inteiro?
+     A) str
+     B) bool
+   → C) int
+     D) float
+   Resposta correta: C) int
+   Explicação: int representa números inteiros.
+
+3. Qual tipo representa um texto?
+   → A) str
+     B) text
+     C) char
+     D) word
+   Resposta correta: A) str
+   Explicação: str é o tipo usado para strings.
+
+4. Qual valor booleano representa verdadeiro?
+   → A) True
+     B) true
+     C) VERDADEIRO
+     D) 1true
+   Resposta correta: A) True
+   Explicação: Em Python, True começa com letra maiúscula.
+
+5. Qual operador testa igualdade?
+     A) =
+   → B) ==
+     C) !=
+     D) equals
+   Resposta correta: B) ==
+   Explicação: == compara dois valores.
+
+6. Qual operador significa diferente?
+     A) <>
+     B) =
+   → C) !=
+     D) not==
+   Resposta correta: C) !=
+   Explicação: != verifica se os valores são diferentes.
+
+7. Qual palavra inicia uma condição?
+     A) when
+   → B) if
+     C) check
+     D) case
+   Resposta correta: B) if
+   Explicação: if inicia uma condição.
+
+8. Qual palavra define o caminho alternativo de um if?
+     A) otherwise
+     B) then
+   → C) else
+     D) elif
+   Resposta correta: C) else
+   Explicação: else é executado quando a condição anterior não é verdadeira.
+
+9. Qual palavra verifica outra condição após um if?
+   → A) elif
+     B) elseif
+     C) another
+     D) nextif
+   Resposta correta: A) elif
+   Explicação: elif significa 'else if'.
+
+10. Qual laço percorre os itens de uma sequência?
+     A) repeat
+     B) foreach
+   → C) for
+     D) loop
+   Resposta correta: C) for
+   Explicação: for percorre os itens de uma sequência.
+
+11. Qual laço continua enquanto uma condição for verdadeira?
+   → A) while
+     B) during
+     C) forwhile
+     D) until
+   Resposta correta: A) while
+   Explicação: while repete enquanto a condição for verdadeira.
+
+12. O que range(4) produz em um for?
+     A) 1, 2, 3, 4
+   → B) 0, 1, 2, 3
+     C) 0, 1, 2, 3, 4
+     D) 4, 3, 2, 1
+   Resposta correta: B) 0, 1, 2, 3
+   Explicação: range(4) gera 0, 1, 2 e 3.
+
+13. Qual comando interrompe um laço imediatamente?
+     A) stop
+   → B) break
+     C) skip
+     D) exitloop
+   Resposta correta: B) break
+   Explicação: break encerra o laço.
+
+14. Qual comando pula para a próxima repetição?
+     A) pass
+     B) break
+   → C) continue
+     D) next
+   Resposta correta: C) continue
+   Explicação: continue pula o restante da iteração atual.
+
+15. Como se cria uma função em Python?
+     A) function minha_funcao():
+   → B) def minha_funcao():
+     C) func minha_funcao():
+     D) create minha_funcao()
+   Resposta correta: B) def minha_funcao():
+   Explicação: Funções são definidas com def.
+
+16. Qual palavra devolve um resultado de uma função?
+     A) send
+     B) print
+   → C) return
+     D) back
+   Resposta correta: C) return
+   Explicação: return devolve um valor para quem chamou a função.
+
+17. Qual função lê uma entrada do usuário?
+     A) read()
+   → B) input()
+     C) scan()
+     D) get()
+   Resposta correta: B) input()
+   Explicação: input() recebe texto digitado pelo usuário.
+
+18. Qual é o resultado de 3 + 2 * 4?
+     A) 20
+     B) 20.0
+   → C) 11
+     D) 14
+   Resposta correta: C) 11
+   Explicação: A multiplicação acontece antes da soma: 3 + 8 = 11.
+
+19. Qual operador calcula o resto da divisão?
+     A) /
+     B) //
+   → C) %
+     D) **
+   Resposta correta: C) %
+   Explicação: % retorna o resto da divisão.
+
+20. Qual operador faz divisão inteira, descartando a parte decimal?
+     A) /
+   → B) //
+     C) %
+     D) **
+   Resposta correta: B) //
+   Explicação: // faz divisão inteira.
+
+21. Qual operador representa potência?
+     A) ^
+   → B) **
+     C) pow^
+     D) ^^
+   Resposta correta: B) **
+   Explicação: ** calcula potência, como 2**3 = 8.
+
+22. Como converter o texto '42' para inteiro?
+     A) str('42')
+     B) float('42')
+   → C) int('42')
+     D) number('42')
+   Resposta correta: C) int('42')
+   Explicação: int('42')' retorna o inteiro 42.
+
+23. Qual função informa quantos itens há em uma lista?
+     A) count(lista)
+     B) size(lista)
+   → C) len(lista)
+     D) length(lista)
+   Resposta correta: C) len(lista)
+   Explicação: len() retorna o tamanho de uma sequência.
+
+24. Qual estrutura guarda vários itens em ordem e pode ser alterada?
+     A) tuple
+   → B) list
+     C) str
+     D) bool
+   Resposta correta: B) list
+   Explicação: Listas são ordenadas e mutáveis.
+
+25. Qual símbolo normalmente cria uma lista?
+     A) {}
+     B) ()
+   → C) []
+     D) <>
+   Resposta correta: C) []
+   Explicação: Listas usam colchetes.
+
+26. Qual método adiciona um item ao final de uma lista?
+     A) add()
+   → B) append()
+     C) insert_end()
+     D) push_back()
+   Resposta correta: B) append()
+   Explicação: append() acrescenta um item ao final.
+
+27. Como acessar o primeiro elemento de lista?
+     A) lista[1]
+   → B) lista[0]
+     C) lista.first
+     D) lista(-1)
+   Resposta correta: B) lista[0]
+   Explicação: Os índices começam em 0.
+
+28. Qual índice acessa o último elemento de uma lista?
+     A) lista[0]
+     B) lista[1]
+   → C) lista[-1]
+     D) lista[last]
+   Resposta correta: C) lista[-1]
+   Explicação: O índice -1 acessa o último item.
+
+29. Qual estrutura é imutável e ordenada?
+     A) list
+     B) dict
+   → C) tuple
+     D) set
+   Resposta correta: C) tuple
+   Explicação: Tuplas não podem ser alteradas após criadas.
+
+30. Qual estrutura armazena pares chave-valor?
+     A) list
+   → B) dict
+     C) tuple
+     D) range
+   Resposta correta: B) dict
+   Explicação: Dicionários armazenam valores associados a chaves.
+
+31. Qual método retorna as chaves de um dicionário?
+   → A) keys()
+     B) values()
+     C) items()
+     D) getkeys()
+   Resposta correta: A) keys()
+   Explicação: keys() retorna as chaves.
+
+32. Qual estrutura remove duplicatas e não garante ordem tradicional de índice?
+     A) list
+     B) tuple
+   → C) set
+     D) str
+   Resposta correta: C) set
+   Explicação: set guarda elementos únicos.
+
+33. Qual valor representa ausência de valor definido?
+   → A) None
+     B) null
+     C) empty
+     D) void
+   Resposta correta: A) None
+   Explicação: Python usa None.
+
+34. Qual exceção costuma ocorrer ao dividir um número por zero?
+     A) ValueError
+     B) TypeError
+   → C) ZeroDivisionError
+     D) IndexError
+   Resposta correta: C) ZeroDivisionError
+   Explicação: Divisão por zero gera ZeroDivisionError.
+
+35. Qual bloco é usado para tratar uma exceção?
+     A) if/else
+   → B) try/except
+     C) for/in
+     D) def/return
+   Resposta correta: B) try/except
+   Explicação: try/except permite tratar erros durante a execução.
+
+36. O que faz len('gato')?
+     A) Retorna 3
+   → B) Retorna 4
+     C) Retorna 'gato'
+     D) Gera erro
+   Resposta correta: B) Retorna 4
+   Explicação: A string 'gato' tem quatro caracteres.
+
+37. Qual é o resultado de 'Py' + 'thon'?
+     A) Py thon
+   → B) Python
+     C) Py+thon
+     D) Erro
+   Resposta correta: B) Python
+   Explicação: O operador + concatena strings.
+
+38. Qual método transforma uma string em letras minúsculas?
+   → A) lower()
+     B) small()
+     C) down()
+     D) tolower
+   Resposta correta: A) lower()
+   Explicação: lower() retorna a string em minúsculas.
+
+39. Qual método remove espaços das extremidades de uma string?
+     A) cut()
+   → B) strip()
+     C) trim()
+     D) remove_space()
+   Resposta correta: B) strip()
+   Explicação: strip() remove espaços no começo e no fim.
+
+40. Qual expressão verifica se 5 é maior que 3?
+     A) 5 => 3
+   → B) 5 > 3
+     C) 5 =< 3
+     D) 5 >< 3
+   Resposta correta: B) 5 > 3
+   Explicação: O operador > significa maior que.
+
+41. Qual operador lógico exige que as duas condições sejam verdadeiras?
+     A) or
+     B) not
+   → C) and
+     D) xor
+   Resposta correta: C) and
+   Explicação: and só é verdadeiro se ambas as condições forem verdadeiras.
+
+42. Qual operador lógico é verdadeiro quando pelo menos uma condição é verdadeira?
+     A) and
+   → B) or
+     C) not
+     D) is
+   Resposta correta: B) or
+   Explicação: or exige que pelo menos uma condição seja verdadeira.
+
+43. O que not True retorna?
+     A) True
+   → B) False
+     C) None
+     D) 0
+   Resposta correta: B) False
+   Explicação: not inverte o valor booleano.
+
+44. Qual é a saída de print(2 == 2)?
+     A) 2
+   → B) True
+     C) False
+     D) None
+   Resposta correta: B) True
+   Explicação: 2 é igual a 2, então a comparação retorna True.
+
+45. Qual é a saída de print(10 % 3)?
+     A) 3
+   → B) 1
+     C) 0
+     D) 3.33
+   Resposta correta: B) 1
+   Explicação: 10 dividido por 3 deixa resto 1.
+
+46. Qual é o resultado de list(range(2, 6))?
+   → A) [2, 3, 4, 5]
+     B) [2, 3, 4, 5, 6]
+     C) [1, 2, 3, 4, 5]
+     D) [6, 5, 4, 3, 2]
+   Resposta correta: A) [2, 3, 4, 5]
+   Explicação: O limite final do range não é incluído.
+
+47. Qual comando importa o módulo math?
+     A) include math
+     B) using math
+   → C) import math
+     D) load(math)
+   Resposta correta: C) import math
+   Explicação: import carrega um módulo.
+
+48. Qual função do módulo math calcula a raiz quadrada?
+     A) math.root()
+   → B) math.sqrt()
+     C) sqrt.math()
+     D) math.square()
+   Resposta correta: B) math.sqrt()
+   Explicação: math.sqrt() calcula a raiz quadrada.
+
+49. Qual palavra cria uma classe?
+     A) object
+   → B) class
+     C) struct
+     D) new
+   Resposta correta: B) class
+   Explicação: class define uma classe.
+
+50. Em Python, qual é o nome convencional do método inicializador de uma classe?
+     A) init()
+   → B) __init__()
+     C) constructor()
+     D) start()
+   Resposta correta: B) __init__()
+   Explicação: __init__ é chamado ao criar uma instância, conforme definido na classe.
+
+51. Qual destas opções é um comentário de uma linha?
+     A) // comentário
+   → B) # comentário
+     C) <!-- comentário -->
+     D) ** comentário
+   Resposta correta: B) # comentário
+   Explicação: O caractere # inicia um comentário de linha.
+
+52. Qual é o resultado de bool(0)?
+     A) True
+   → B) False
+     C) 0
+     D) None
+   Resposta correta: B) False
+   Explicação: Zero é considerado falso em contexto booleano.
+
+53. Qual destas opções cria um conjunto vazio?
+     A) {}
+     B) []
+   → C) set()
+     D) ()
+   Resposta correta: C) set()
+   Explicação: {} cria um dicionário vazio; set() cria um conjunto vazio.
+
+54. Qual destas opções cria um dicionário vazio?
+   → A) {}
+     B) set()
+     C) dict[]
+     D) []
+   Resposta correta: A) {}
+   Explicação: {} cria um dicionário vazio.
+
+55. O que enumerate(lista) costuma fornecer em um laço?
+     A) Só os valores em ordem inversa
+   → B) Pares de índice e valor
+     C) O tamanho da lista
+     D) Uma lista ordenada
+   Resposta correta: B) Pares de índice e valor
+   Explicação: enumerate() fornece índice e valor a cada iteração.
+
+56. Qual função combina elementos de um iterável em uma string usando um separador?
+     A) split()
+   → B) join()
+     C) combine()
+     D) merge()
+   Resposta correta: B) join()
+   Explicação: join() une strings usando o separador, como ','.join(lista).
+
+57. Qual método divide uma string em partes usando um separador?
+     A) join()
+     B) slice()
+   → C) split()
+     D) partition_all()
+   Resposta correta: C) split()
+   Explicação: split() separa uma string em uma lista de partes.
+
+58. Qual palavra é usada para criar uma expressão geradora de valores sequenciais?
+   → A) yield
+     B) return
+     C) send
+     D) emit
+   Resposta correta: A) yield
+   Explicação: yield produz um valor e pausa a execução de uma função geradora.
+
+59. Qual é a finalidade principal do pip?
+     A) Executar arquivos Python
+   → B) Instalar e gerenciar pacotes Python
+     C) Editar código automaticamente
+     D) Criar variáveis
+   Resposta correta: B) Instalar e gerenciar pacotes Python
+   Explicação: pip instala e gerencia pacotes Python.
+
+60. Qual extensão é normalmente usada para arquivos de código Python?
+     A) .pt
+     B) .python
+   → C) .py
+     D) .pytxt
+   Resposta correta: C) .py
+   Explicação: Arquivos Python normalmente usam a extensão .py.
+
+61. Qual comando costuma executar um arquivo chamado jogo.py no terminal?
+   → A) python jogo.py
+     B) run jogo.py
+     C) execute.py jogo
+     D) start python
+   Resposta correta: A) python jogo.py
+   Explicação: python jogo.py executa o arquivo com o interpretador Python.
