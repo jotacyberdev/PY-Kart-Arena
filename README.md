@@ -1,85 +1,47 @@
-# 🏎️ PyKart Arena
+# 🏎️ PyKart Arena — Edição Pista Domo
 
-**PyKart Arena** é um jogo web humorístico e educativo de corrida em tabuleiro que mistura **perguntas de programação em Python**, **minijogos clássicos**, **roleta de recompensas** e **batalha de itens** entre pilotos animais. O projeto roda com um servidor **Node.js puro** e interface web nativa, sem necessidade de instalar bibliotecas externas.
+**PyKart Arena** é um jogo web humorístico e educativo de corrida em tabuleiro que combina **perguntas de programação em Python**, **minijogos clássicos**, **roleta de recompensas**, **sistema de ranking** e **batalha de itens** entre pilotos animais. O projeto roda com um servidor **Node.js puro** e interface web nativa (HTML5, CSS3 e JavaScript Vanilla), sem necessidade de instalar bibliotecas externas.
+
+---
+
+## ✨ Novidades da Versão Pista Domo
+
+* 🏟️ **Nova Pista Domo:** Circuito inédito adicionado à rotação de pistas, juntando-se aos cenários de **Floresta**, **Praia** e **Oceano**, com layout e desafios visuais exclusivos.
+* 🏆 **Sistema de Ranking (`Ranking Pro`):** Classificação competitiva para acompanhar a pontuação, o desempenho nas perguntas de Python e as vitórias dos pilotos.
+* 🎨 **Interface e Telas Aprimoradas:** Atualizações na organização das páginas (`public/pages`), estilos (`public/css`) e mecânicas de jogo (`public/js`) para uma navegação mais fluida entre partidas.
+
+---
 
 ## 🎮 Fluxo e Mecânicas do Jogo
 
 1. **Tela de Login e CAPTCHA Satírico (`index.html`):**
-   * Paródia humorística de autenticação com validação de CPF fictício (nenhum dado é enviado ou armazenado).
-   * Desafio de CAPTCHA temático antes de liberar o acesso à pista.
-2. **Seleção de Personagem (`selecao.html`):**
-   * Escolha entre **Tigrinho 🐯**, **Veado 🦌**, **Onça-pintada 🐆** ou **Macaco 🐒**.
-   * O personagem escolhido é controlado pelo jogador e os outros três entram automaticamente como adversários CPU.
-3. **Corrida em 3 Biomas (`corrida.html`):**
-   * Tabuleiro de **30 casas** dividido em **Floresta** (1–10), **Praia** (11–20) e **Oceano** (21–30).
-   * Movimentação por dado **D3** (probabilidade real de 1/3 para cada face), eventos aleatórios na pista (*Turbo*, *Óleo* e *Pane*) e console de eventos em tempo real.
+   * Paródia humorística de autenticação com validação de CPF fictício (nenhum dado real é enviado ou armazenado).
+2. **Seleção de Piloto e Pista:**
+   * Escolha entre pilotos animais carismáticos e selecione o circuito da corrida (**Floresta**, **Praia**, **Oceano** ou a nova **Pista Domo**).
+3. **Corrida em Tabuleiro (30 Casas):**
+   * Avance pelo percurso respondendo a desafios de Python (`PERGUNTAS-PYTHON.json`) para ganhar velocidade e bônus.
+4. **Minijogos Integrados:**
+   * 4 minijogos clássicos embutidos durante a partida para conquistar vantagens extras na pista.
+5. **Roleta de Gemas, Loja e Batalha de Itens:**
+   * Acumule gemas na roleta de recompensas e equipe itens na loja para atrapalhar oponentes ou proteger seu kart.
+6. **Ranking Geral:**
+   * Consulte a tabela de classificação ao final das corridas e compare resultados.
 
-## ✨ Principais Funcionalidades
-
-* **🐍 Quiz de Python por Rodada:** Ao final de cada rodada completa, surge um desafio de múltipla escolha (banco com **61 questões** de Python). Acertar concede **+1 gema** (a CPU também responde automaticamente com 25% de chance de acerto).
-* **🛒 Loja e Bolsa de Itens:**
-  * **Óleo (`5 💎`):** Faz o líder adversário voltar 2 casas.
-  * **Buraco (`7 💎`):** Faz o adversário perder o próximo turno.
-  * **Escudo (`8 💎`):** Bloqueia o próximo ataque recebido.
-  * **Super Turbo (`10 💎`):** Avança +3 casas imediatamente.
-* **🎡 Roda da Sorte e Recarga Simulada:**
-  * Roleta animada em CSS/JS com cooldown de 24 horas e prêmios de até **+100 gemas**.
-  * Modal de compra fictícia de gemas para fins didáticos.
-* **🕹️ Minijogos Integrados (Recompensa: 1 item aleatório):**
-  * **Jogo da Velha (`Ctrl + Z`):** Partida contra CPU inteligente.
-  * **Gênio das Cores (`Ctrl + X`):** Desafio de memória visual com 7 níveis.
-  * **Jogo da Forca (`Ctrl + C`):** Palavras por categoria com limite de 5 erros.
-  * **Reflexo das Setas (`Ctrl + V`):** 15 setas direcionais com tempo limite de 1,25s por comando.
-* **🧪 Atalhos de Teste de Pódio:** `Ctrl + P` (1º lugar), `Ctrl + O` (2º lugar), `Ctrl + I` (3º lugar) e `Ctrl + U` (4º lugar).
-
-## 🛠️ Tecnologias Utilizadas
-
-* **Node.js (Módulos nativos `http`, `fs` e `path`):** Servidor HTTP local sem dependências externas.
-* **HTML5 & CSS3:** Layout responsivo, animações da roleta (`conic-gradient`), modais e sprites dos karts.
-* **JavaScript (Vanilla JS):** Lógica de turnos, IA dos minijogos, quiz de Python e persistência de gemas/cooldown via `LocalStorage`.
+---
 
 ## 🗂️ Estrutura do Projeto
 
 ```text
+PY-Kart-Arena/
 ├── public/
-│   ├── index.html                  # Tela inicial de login e CAPTCHA
-│   ├── pages/
-│   │   ├── selecao.html            # Tela de escolha de personagem
-│   │   └── corrida.html            # Tabuleiro, loja, roleta, minijogos e console
-│   ├── js/
-│   │   ├── login.js                # Validação fictícia e lógica do CAPTCHA
-│   │   ├── selection.js            # Controle de seleção de pilotos
-│   │   └── race.js                 # Motor da corrida, quiz, loja e minijogos
-│   ├── css/
-│   │   ├── app.css                 # Estilos do login, CAPTCHA e seleção
-│   │   └── race.css                # Estilos da pista, HUD, roleta e modais
-│   └── assets/                     # Mapa de fundo e sprites dos karts
-├── server.js                       # Servidor Node.js puro
-├── package.json                    # Metadados e script de inicialização
-├── PERGUNTAS-PYTHON.json           # Banco de 61 perguntas de Python
-├── PERGUNTAS-PYTHON-GABARITO.txt   # Gabarito explicado
-└── COMO-RODAR.txt                  # Instruções de execução
-```
-
-## 💻 Como Executar
-
-### Pré-requisitos
-* Ter o **Node.js** instalado na máquina (não é necessário rodar `npm install`).
-
-### Passo a passo
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com
-   ```
-2. Acesse a pasta do projeto:
-   ```bash
-   cd py-kart-arena
-   ```
-3. Inicie o servidor:
-   ```bash
-   node server.js
-   ```
-4. Acesse no navegador:
-   ```text
-   http://localhost:3000
-   ```
+│   ├── assets/                     # Recursos visuais e sonoros
+│   ├── css/                        # Folhas de estilo da interface e pistas
+│   ├── images/                     # Sprites dos pilotos, itens e cenários
+│   ├── js/                         # Lógica da corrida, quiz, minijogos e ranking
+│   ├── pages/                      # Telas do jogo (tabuleiro, loja, ranking, etc.)
+│   └── index.html                  # Tela inicial e login satírico
+├── COMO-RODAR.txt                  # Instruções rápidas de execução
+├── PERGUNTAS-PYTHON.json           # Banco de questões de Python do jogo
+├── PERGUNTAS-PYTHON-GABARITO.txt   # Gabarito comentado das questões
+├── package.json                    # Metadados do projeto Node.js
+└── server.js                       # Servidor HTTP nativo em Node.js puro
